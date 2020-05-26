@@ -3,7 +3,7 @@ import os
 #Give output workspace
 out_workspace = "D:/Final/iterate"
 def unique_values(table, field):
-	with arcpy.da.SearchCursor(table, [field]) as cursor:
+	with arcpy.da.SearchCursor(table, [field]) as cursor: #makes roms of selected item
 		dict = sorted({x[0] for x in cursor})
 		print type(dict) #testing to find type 
 	for i in range(len(dict)):
